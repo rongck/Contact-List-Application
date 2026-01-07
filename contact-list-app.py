@@ -6,7 +6,7 @@ from flaskext.mysql import MySQL
 app = Flask(__name__)
 
 # This "/home/ec2-user/dbserver.endpoint" file has to be created from cloudformation template and it has RDS endpoint
-db_endpoint = open("/home/ec2-user/dbserver.endpoint", 'r', encoding='UTF-8') 
+db_endpoint = open("/home/ec2-user/Contact-List-Application/dbserver.endpoint", 'r', encoding='UTF-8') 
 
 # Configure mysql database
 
@@ -166,3 +166,4 @@ if __name__== '__main__':
     init_contact_list_db()
     # app.run(debug=True)
     app.run(host='0.0.0.0', port=80) 
+
